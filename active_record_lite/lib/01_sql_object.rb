@@ -48,7 +48,11 @@ class SQLObject
   end
 
   def initialize(params = {})
-    # ...
+    params.each do |k,v|
+      col = k.to_sym
+      raise "unknown attribute '#{col}'" unless self.class.columns.include?(col)
+      self.send("#{col}=", v)
+    end
   end
 
   def attributes

@@ -21,7 +21,6 @@ class SQLObject
       define_method(column) do
         self.attributes[column]
       end
-    
     end
   end
 

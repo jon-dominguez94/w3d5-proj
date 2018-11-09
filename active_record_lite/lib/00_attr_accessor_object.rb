@@ -8,6 +8,5 @@ class AttrAccessorObject
         instance_variable_set("@#{name}", val)
       end
     end
-
   end
 end

@@ -21,9 +21,7 @@ class SQLObject
       define_method(column) do
         self.attributes[column]
       end
-      define_method("#{column}=") do |value|
-        self.attributes[column] = value
-      end
+    
     end
   end
 
